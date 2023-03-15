@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TEST2.Models.ViewModels.StudentFull>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="container p-3">
+
+<table class="table table-striped">
+
+<thead>
+   <tr>
+            <th>
+                StudentId
+            </th>
+             <th>
+                    Student University Id
+            </th>
+
+                <th>
+                    GPA
+                </th>
+
+                <th>
+                    Department Id
+                </th>
+
+
+                <th>
+                    Department
+                </th>
+
+
+                <th>
+                    University
+                </th>
+        </tr>
+</thead>
+
+    <tbody>
+     
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.StudentId
+                    </td>
+
+                    <td>
+                        @item.StudentUniversityId
+                    </td>
+                    <td>
+                        @item.GPA
+                    </td>
+                    <td>
+                        @item.DepartmentId
+                    </td>
+                     <td>
+                        @item.CollegeName
+                    </td>
+                     <td>
+                        @item.OrganizationName
+                    </td>
+                </tr>
+                
+            }
+        </tbody>
+
+</table>
+    
+</div>
